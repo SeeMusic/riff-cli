@@ -1,0 +1,43 @@
+{
+  "name": "@kmfe/riff",
+  "version": "0.1.0",
+  "description": "Interactive CLI tool for project configuration",
+  "main": "dist/index.js",
+  "module": "./dist/main.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "kriff": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "pnpm run build"
+  },
+  "author": "cuiguojie@kanjian.com",
+  "license": "MIT",
+  "homepage": "https://github.com/seemusic/riff-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seemusic/riff-cli.git"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "picocolors": "^1.0.1",
+    "yargs-parser": "^21.1.1"
+  }
+}
